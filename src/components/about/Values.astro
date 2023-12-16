@@ -1,0 +1,59 @@
+---
+const values = [
+  [
+    {
+      ref: '01',
+      name: 'Empathy',
+      description:
+        'Rooted in overcoming relational challenges, Cor.inc values deep empathy and understanding, striving to create technologies that bridge communication gaps and foster meaningful connections',
+    },
+    {
+      ref: '02',
+      name: 'Innovation',
+      description:
+        'At Cor.inc, innovation is pivotal. We relentlessly pursue cutting-edge technologies to develop creative solutions, enabling our clients to navigate and thrive in an ever-evolving digital landscape.',
+    },
+  ],
+  [
+    {
+      ref: '03',
+      name: 'Empowerment',
+      description:
+        "At Cor.Inc, we embrace cutting-edge technologies and diverse values to empower our users and our team towards achieving their full potential, fostering an ecosystem where innovation thrives and every individual's unique path to self-realization is supported and celebrated.",
+    },
+    {
+      ref: '04',
+      name: 'Collaborative Progress',
+      description:
+        'Cor.inc is committed to collaborative progress, fostering an environment where diverse viewpoints converge in co-creation rather than competition, to build a more inclusive and innovative society.',
+    },
+  ],
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-8 lg:gap-12">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Our Values</h2>
+      <div class="grid gap-8 lg:grid-cols-2">
+        {
+          values.map((column, index) => (
+            <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
+              {column.map((value) => (
+                <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+                  <p class="text-sm">{value.ref}</p>
+                  <div class="flex flex-col gap-4">
+                    <h3 class="text-xl font-medium">{value.name}</h3>
+                    <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                      {value.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
