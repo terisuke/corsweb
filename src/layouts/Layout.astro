@@ -40,15 +40,13 @@ const { description, title } = Astro.props;
         display: none !important;
       }
     </style>
-    <script>
+    <script lang="ts">
       import Alpine from 'alpinejs';
       import collapse from '@alpinejs/collapse';
-
       Alpine.plugin(collapse);
 
       Alpine.store('theme', {
         isDark: false,
-
         init() {
           this.isDark = (() => {
             if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
