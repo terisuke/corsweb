@@ -47,6 +47,8 @@ const { description, title } = Astro.props;
       Alpine.plugin(collapse);
 
       Alpine.store('theme', {
+        isDark: false,
+
         init() {
           this.isDark = (() => {
             if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -58,15 +60,11 @@ const { description, title } = Astro.props;
             return false;
           })();
         },
-
-        isDark: false,
-
         toggle() {
           this.isDark = !this.isDark;
           localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
         },
       });
-
       window.Alpine = Alpine;
       Alpine.start();
     </script>
