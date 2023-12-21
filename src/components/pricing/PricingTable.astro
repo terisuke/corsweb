@@ -3,20 +3,20 @@ const article = [
   {
     name: 'Note',
     description: 'Places that publicize non-technical matters such as philosophy, vision, and mission statements.',
-    icon: 'public/assets/Note.webp',
+    icon: '/assets/Note.webp',
     action: 'https://note.com/cor_instrument',
   },
   {
     name: 'Qiita',
     description: 'Mainly where We write about how to use technologies such as frameworks and libraries.',
     isFlagged: true,
-    icon: 'public/assets/Qiita.webp',
+    icon: '/assets/Qiita.webp',
     action: 'https://qiita.com/terisuke',
   },
   {
     name: 'Zenn',
     description: 'Mainly where We write tutorials on newly introduced technologies.',
-    icon: 'public/assets/Zenn.webp',
+    icon: '/assets/Zenn.webp',
     action: 'https://zenn.dev/terisuke',
   },
 ];
@@ -76,7 +76,7 @@ const youtube = [
           >
             <div class="flex-1">
               <iframe id="player" class="flex-1 aspect-video w-full"
-                src={`http://www.youtube.com/embed/${item.id[Math.floor(Math.random() * item.id.length)]}`}></iframe>
+                src={`https://www.youtube.com/embed/${item.id[Math.floor(Math.random() * item.id.length)]}`}></iframe>
               <div class="py-4"></div>
               <h2 class="text-4xl font-medium text-center">{item.name}</h2>
               <p class="text-primary-950/70 dark:text-primary-200/70 mt-6 text-center">{item.description}</p>

@@ -16,7 +16,7 @@
     "@fontsource/inter": "5.0.8",
     "@types/alpinejs": "3.7.2",
     "alpinejs": "^3.13.3",
-    "astro": "2.10.13",
+    "astro": "^4.0.7",
     "astro-compress": "^2.2.5",
     "firebase": "^10.7.1",
     "prettier": "3.0.2",

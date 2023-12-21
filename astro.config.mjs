@@ -6,7 +6,6 @@ import compress from 'astro-compress';
 export default defineConfig({
   experimental: {
     optimizeHoistedScript: true,
-    viewTransitions: true,
   },
   integrations: [tailwind(), compress()],
 });
